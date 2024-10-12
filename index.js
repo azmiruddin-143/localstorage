@@ -1,67 +1,23 @@
 
-// let addbutton = () => {
-//     let inputName = document.getElementById("productName")
-//     let inputQuentity = document.getElementById("quentityNumber")
-//     let inputvalue = inputName.value;
-//     let quentitytvalue = inputQuentity.value;
-//     if(inputvalue === "" || quentitytvalue === ""){
-//         alert("plz type phone name and quentity")
-//         return
-//     }
-//     inputName.value = ""
-//     inputQuentity.value = ""
-//     display(inputvalue, quentitytvalue)
-//     productDataSave(inputvalue, quentitytvalue)
-// }
-
-
-// let display = (inputvalue, quentitytvalue) => {
-//     let ul = document.getElementById("itemList")
-//     let li = document.createElement("li")
-//     li.style.paddingBottom = "20px"
-//     li.innerHTML = `
-//            ${inputvalue} -  ${quentitytvalue}
-//      `
-//     ul.appendChild(li)
-// }
-// // fngvn vgbn /?
-
-// let productDataChek = () => {
-//     let cart = {}
-//     let cartChek = localStorage.getItem('cart')
-//     if (cartChek) {
-//         cart = JSON.parse(cartChek)
-//     }
-//     return cart
-// }
-
-
-// let productDataSave = (inputvalue, quentitytvalue) => {
-//     let cart = productDataChek();
-//     cart[inputvalue] = quentitytvalue;
-//     let cardstringconvart = JSON.stringify(cart);
-//     localStorage.setItem('cart', cardstringconvart)
-// }
-
-// let displayproduct = () => {
-//     let saveCart = productDataChek();
-//     for (let inputvalue in saveCart) {
-//         let quentitytvalue = saveCart[inputvalue ]
-//         display(inputvalue, quentitytvalue)
-//     }
-// }
-
-// displayproduct()
-
-
-
-
-
 let addListAdd = () => {
     let productName = document.getElementById("product-name")
     let productValue = productName.value
     let quentityNumber = document.getElementById("quentity-number")
     let quentityValue = quentityNumber.value
+    if(productValue.length > 18){
+        alert("product lenght hightn")
+        productName.value = ""
+        quentityNumber.value = ""
+        return
+     }
+     if(productValue === "" || quentityValue === ""){
+        alert("Plz type Product name and quantity")
+        return
+     }
+    
+     if(productValue.length > 5){
+        alert()
+     }
     productName.value = ""
     quentityNumber.value = ""
     contentAddBody(productValue, quentityValue)
