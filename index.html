@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storeage</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <header class="flex justify-center flex-col items-center">
+            <h1 class="font-bold sm:text-3xl text-xl text-black font-mono my-8 text-center">Phone name and Quantity</h1>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <input id="product-name" type="text" placeholder="Product Name" class="input text-base sm:text-xl input-bordered w-full max-w-xs" />
+                <input id="quentity-number" type="number" placeholder="Quentity" class="input text-base sm:text-xl input-bordered w-full max-w-xs" />
+            </div>
+            <button onclick="addListAdd()" class="btn my-7 bg-[#3071a99c]  hover:bg-[#000000c2] hover:text-white">Add List</button>
+        </header>
+
+        <div id="body-part" class="2xl:w-3/12 xl:w-4/12 lg:w-5/12 sm:w-6/12 w-9/12 mx-auto">
+             <div id="itemlist" class="grid grid-cols-2 border border-solid">
+                  <h3 class="border border-solid px-2 py-2 text-black font-bold sm:text-xl text-base">Phone Name</h3>
+                  <h3 class="border border-solid px-2 py-2 text-black font-bold sm:text-xl text-base">Quantity</h3>
+                  
+             </div>
+        </div>
+
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
