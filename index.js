@@ -4,19 +4,26 @@ let addListAdd = () => {
     let productValue = productName.value
     let quentityNumber = document.getElementById("quentity-number")
     let quentityValue = quentityNumber.value
+   
     if(productValue.length > 18){
-        alert("product lenght hightn")
-        productName.value = ""
-        quentityNumber.value = ""
+        alert("product lenght high")
         return
      }
+     
      if(productValue === "" || quentityValue === ""){
         alert("Plz type Product name and quantity")
         return
      }
     
-     if(productValue.length > 5){
-        alert()
+     if(!isNaN(productValue)){
+        alert("Product Not String")
+        return
+     }
+
+
+     if(quentityValue < 0){
+        alert("quantity type positive")
+        return
      }
     productName.value = ""
     quentityNumber.value = ""
